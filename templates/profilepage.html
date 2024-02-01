@@ -6,21 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile</title>
     <style>
-        body 
+        body
         {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
         }
-        header 
+        header
         {
             background-color: #333;
             color: #fff;
             padding: 10px;
             text-align: center;
         }
-        main 
+        main
         {
             max-width: 600px;
             margin: 20px auto;
@@ -29,30 +29,30 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);          
         }
-        h1 
+        h1
         {
             color: #333;
             margin-bottom: 20px;
         }
-        img 
+        img
         {
-            width: 200px; 
-            height: 200px; 
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
             margin-bottom: 20px;
             display: block;
             margin-left: auto;
             margin-right: auto;
-            border: 5px solid #fff; 
+            border: 5px solid #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
-        p 
+        p
         {
             margin: 15px 0;
             font-size: 18px;
             color: #555;
         }
-        strong 
+        strong
         {
             color: #333;
         }
@@ -64,9 +64,15 @@
     </header>
     <main>
         <img src="{{ image }}" style="width: 150px; height: 150px; border-radius: 50%; margin-bottom: 20px;">
-        <p><strong>Name:</strong> {{ name }}</p>
-        <p><strong>Date of Birth:</strong> {{ dateOfBirth }}</p>
+        <p id="name"><strong>Name:</strong> {{ name }}</p>
+        <p id="dateOfBirth"><strong>Date of Birth:</strong> {{ dateOfBirth }}</p>
         <p><strong>Email:</strong> {{ email }}</p>
+        <label for="new_name">New Name:</label>
+        <input type="text" id="new_name" placeholder="Enter new name">
+        <label for="new_dob">New Date of Birth:</label>
+        <input type="text" id="new_dob" placeholder="Enter new date of birth">
+        <button onclick="submitForm()">Update Profile</button>
     </main>
+    <script src="/static/updateprofile.js"></script>
 </body>
 </html>
