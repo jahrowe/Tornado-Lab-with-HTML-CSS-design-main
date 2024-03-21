@@ -10,7 +10,7 @@ function submitForm() {
     }
 
 
-    let dateRegex = /^(Jan\.|Feb\.|Mar\.|Apr\.|May|Jun\.|Jul\.|Aug\.|Sep\.|Oct\.|Nov\.|Dec\.)(?:\s|\.|\s\.)\s?\d{1,2}$/;
+    let dateRegex = /^(Jan\.|Feb\.|Mar\.|Apr\.|May\.?|Jun\.?|Jul\.?|Aug\.|Sep\.?|Oct\.?|Nov\.?|Dec\.?)\s?(\d{1,2}|(0[1-9]|1[0-9]|2[0-9]|3[01])(st|nd|rd|th))$/;
     if (!dateRegex.test(new_dob)) {
         alert('Please enter a valid date of birth.');
         return;
